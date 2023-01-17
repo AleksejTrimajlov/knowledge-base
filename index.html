@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/normoalize.css">
+  <link rel="stylesheet" href="css/choices.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+  <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css"/>
+  <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+  <script src="js/just-validate.min.js"></script>
+  <script src="js/inputmask.min.js"></script>
+  <title>База знаний</title>
+</head>
+<body>
+  <main class="main-container">
+    <form class="checkbox-form" action="#">
+      <p class="checkbox-form__heading">Категории:</p>
+      <label class="checkbox-form__label" for="checkbox-dino">
+        <input class="checkbox-form__checkbox" type="checkbox" id="checkbox-dino">
+        Динозавры
+        <span></span>
+      </label>
+      <label class="checkbox-form__label" for="checkbox-bear">
+        <input class="checkbox-form__checkbox" type="checkbox" id="checkbox-bear">
+        Медведи
+        <span></span>
+      </label>
+      <label class="checkbox-form__label" for="checkbox-rdeer">
+        <input class="checkbox-form__checkbox" type="checkbox" id="checkbox-rdeer">
+        Косули
+        <span></span>
+      </label>
+      <label class="checkbox-form__label" for="checkbox-fox">
+        <input class="checkbox-form__checkbox" type="checkbox" id="checkbox-fox">
+        Лисы
+        <span></span>
+      </label>
+      <label class="checkbox-form__label" for="checkbox-wolf">
+        <input class="checkbox-form__checkbox" type="checkbox" id="checkbox-wolf">
+        Волки
+        <span></span>
+      </label>
+      <label class="checkbox-form__label" for="checkbox-deer">
+        <input class="checkbox-form__checkbox" type="checkbox" id="checkbox-deer">
+        Олени и лоси
+        <span></span>
+      </label>
+    </form>
+
+    <select class="select-choices">
+      <option>Древесина</option>
+      <option>Металл</option>
+      <option>Камень</option>
+      <option>Пластик</option>
+      <option>Композитный</option>
+      <option>Гипс</option>
+    </select>
+
+    <div class="map-contain">
+      <p class="map-contain__paragraph">В качестве адреса для маркера используйте: Франция, Иль-де-Франс, Париж, X округ Парижа, улица дю Фобур Сен Дени  54</p>
+      <div id="map" style="width: 460px; height: 460px"></div>
+    </div>
+
+    <div class="custom-scroll" data-simplebar>
+      <p class="custom-scroll__paragraph">Сложно сказать, почему многие известные личности представлены в исключительно положительном свете. Лишь активно развивающиеся страны третьего мира будут объективно рассмотрены соответствующими инстанциями. Мы вынуждены отталкиваться от того, что высокотехнологичная концепция общественного уклада представляет собой интересный эксперимент проверки глубокомысленных рассуждений. Имеется спорная точка зрения, гласящая примерно следующее: непосредственные участники технического прогресса освещают чрезвычайно интересные особенности картины в целом, однако конкретные выводы, разумеется, обнародованы. Значимость этих проблем настолько очевидна, что социально-экономическое развитие, а также свежий взгляд на привычные вещи - безусловно открывает новые горизонты для первоочередных требований. Сложно сказать, почему многие известные личности представлены в исключительно положительном свете. Лишь активно развивающиеся страны третьего мира будут объективно рассмотрены соответствующими инстанциями. Мы вынуждены отталкиваться от того, что высокотехнологичная концепция общественного уклада представляет собой интересный эксперимент проверки глубокомысленных рассуждений. Имеется спорная точка зрения, гласящая примерно следующее: непосредственные участники технического прогресса освещают чрезвычайно интересные особенности картины в целом, однако конкретные выводы, разумеется, обнародованы. Значимость этих проблем настолько очевидна, что социально-экономическое развитие, а также свежий взгляд на привычные вещи - безусловно открывает новые горизонты для первоочередных требований.</p>
+    </div>
+
+    <div>
+      <form class="validation-form js-form form" action="#">
+        <label class="validation-form__label" for="name">
+          <input class="validation-form__input form__input" type="text" placeholder="Имя*" id="name" data-validate-field="name">
+        </label>
+        <label class="validation-form__label" for="tel">
+          <input class="validation-form__input form__input" type="tel" placeholder="Телефон*" id="tel" data-validate-field="tel">
+        </label>
+        <label class="validation-form__label" for="email">
+          <input class="validation-form__input form__input" type="email" placeholder="E-mail*" id="email" data-validate-field="email">
+        </label>
+        <button class="validation-form__btn" type="submit">Заказать</button>
+      </form>
+    </div>
+
+    <div class="tooltip-contain">
+      <p class="tooltip-contain__paragraph">
+        Следует отметить, что социально-экономическое развитие способствует повышению качества переосмысления внешнеэкономических политик.
+      </p>
+      <div class="tooltip">
+        <div class="tooltip-contain__tooltip" tabindex="0">
+          <svg class="tooltip-contain__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM8 3C7.33333 3 7 3.31919 7 3.95758C7 4.60026 7.33333 4.92159 8 4.92159C8.33333 4.92159 8.58233 4.83805 8.74699 4.67095C8.91566 4.49957 9 4.26178 9 3.95758C9 3.31919 8.66667 3 8 3ZM7.07831 13H8.91566V5.81491H7.07831V13Z" fill="#BCBCBC"/>
+          </svg>
+        </div>
+        <div class="popup">
+          Глава 2, страница 176
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="js/choices.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
